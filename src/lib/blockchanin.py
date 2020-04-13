@@ -8,7 +8,7 @@ class Blockchain:
 
     def __init__(self):
         self.chain = []
-        self.mine('Hi, i\'m Genesis!', '0000000000000000000000000000000000000000000000000000000000000000')
+        self.mine('Hi, i\'m Genesis!', '0' * 64)
 
     def hash(self, block):
         encoded_block = json.dumps(block, sort_keys=True).encode()
